@@ -34,8 +34,6 @@ if SERVER then
         end)
     end)
 
-
-    -- Remove player colision, code by: https://garrysmods.org/download/55676
     hook.Add( "PlayerSpawn", "PlayerCollision", function(ply) ply:SetCollisionGroup(11) end )
 end
 
@@ -182,6 +180,7 @@ if CLIENT then
             function label:PerformLayout(w, h)
                 label:Dock(TOP)
                 label:SetContentAlignment(5)
+                label:SetWrap(true)
             end
 
             label:SetText("Programming / UI / Idea: LionDaDev")
